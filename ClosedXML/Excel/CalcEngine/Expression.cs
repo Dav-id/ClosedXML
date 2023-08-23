@@ -75,6 +75,11 @@ namespace ClosedXML.Excel.CalcEngine
                 return b ? 1 : 0;
             }
 
+            if(v is System.Double[,] dblArr)
+            {
+                return dblArr[0, 0];
+            }
+
             // handle dates
             if (v is DateTime dt)
             {
